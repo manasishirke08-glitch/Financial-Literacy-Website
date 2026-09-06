@@ -12,731 +12,1262 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="logo">
-            <span class="logo-icon">🌱</span>
+    <div class="logo">
+
+        <span class="logo-icon">🌱</span>
+
+        <div>
+            <h2>MoneySmart Rural</h2>
+            <p>Learn • Save • Grow • Stay Safe</p>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#learn">Learn</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#safety">Safety</a>
+        <a href="#about">About</a>
+
+    </nav>
+
+    <div class="nav-buttons">
+
+        <button class="btn login-btn" onclick="openLogin()">
+            Login
+        </button>
+
+        <button class="btn register-btn" onclick="openRegister()">
+            Register
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HOME / HERO
+===================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="welcome">
+            🌿 Welcome to MoneySmart Rural
+        </p>
+
+        <h1>
+            Financial Literacy
+            <span>for Rural Students</span>
+        </h1>
+
+        <p class="hero-text">
+            Learn how to save, budget, bank and use digital
+            payments safely. Build smart money habits for a
+            better future.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#learn" class="primary-btn">
+                📖 Start Learning
+            </a>
+
+            <a href="#quiz" class="secondary-btn">
+                📝 Take Quiz
+            </a>
+
+        </div>
+
+
+        <div class="hero-features">
 
             <div>
-                <h2>MoneySmart Rural</h2>
-                <p>Learn • Save • Grow • Stay Safe</p>
+                <strong>🐷 Save</strong>
+                <small>for tomorrow</small>
             </div>
-        </div>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#learn">Learn</a>
-            <a href="#calculator">Calculator</a>
-            <a href="#quiz">Quiz</a>
-            <a href="#safety">Safety</a>
-            <a href="#about">About</a>
-        </nav>
-
-        <div class="nav-buttons">
-            <button class="btn login-btn" onclick="openLogin()">Login</button>
-            <button class="btn register-btn" onclick="openRegister()">Register</button>
-        </div>
-
-    </header>
-
-
-    <!-- ================= HOME ================= -->
-
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <p class="welcome">🌿 Welcome to MoneySmart Rural</p>
-
-            <h1>
-                Financial Literacy
-                <span>for Rural Students</span>
-            </h1>
-
-            <p class="hero-text">
-                Learn how to save, budget, bank and use digital payments safely.
-                Build smart money habits for a better future.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#learn" class="primary-btn">
-                    📖 Start Learning
-                </a>
-
-                <a href="#quiz" class="secondary-btn">
-                    📝 Take Quiz
-                </a>
-
-            </div>
-
-            <div class="hero-features">
-
-                <div>
-                    <strong>🐷 Save</strong>
-                    <small>for tomorrow</small>
-                </div>
-
-                <div>
-                    <strong>📊 Budget</strong>
-                    <small>your money</small>
-                </div>
-
-                <div>
-                    <strong>🏦 Bank</strong>
-                    <small>with confidence</small>
-                </div>
-
-                <div>
-                    <strong>📱 Pay</strong>
-                    <small>safely</small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ================= HERO IMAGE ================= -->
-
-        <div class="hero-image-card">
-
-            <<img
-    src="images/image.png"
-    alt="Rural students learning about financial literacy"
->
-            >
-
-            <div class="image-overlay">
-
-                <h3>Learn • Save • Grow</h3>
-
-                <p>
-                    Smart financial habits for a brighter future.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= INTRO ================= -->
-
-    <section class="intro-section">
-
-        <div class="section-heading">
-
-            <span>💡</span>
 
             <div>
-                <h2>Learn Today, Secure Tomorrow</h2>
+                <strong>📊 Budget</strong>
+                <small>your money</small>
+            </div>
 
-                <p>
-                    Financial knowledge helps students make better decisions
-                    about saving, spending and using money safely.
-                </p>
+            <div>
+                <strong>🏦 Bank</strong>
+                <small>with confidence</small>
+            </div>
+
+            <div>
+                <strong>📱 Pay</strong>
+                <small>safely</small>
             </div>
 
         </div>
 
+    </div>
 
-        <div class="feature-grid">
 
-            <div class="feature-card">
-                <div class="feature-icon">🐷</div>
-                <h3>Saving</h3>
-                <p>
-                    Learn how to save money regularly and build good
-                    financial habits.
-                </p>
-            </div>
+    <!-- HERO IMAGE -->
 
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Budgeting</h3>
-                <p>
-                    Understand income, expenses and how to plan your money.
-                </p>
-            </div>
+    <div class="hero-image-card">
 
-            <div class="feature-card">
-                <div class="feature-icon">🏦</div>
-                <h3>Banking</h3>
-                <p>
-                    Learn about bank accounts, interest and basic banking
-                    services.
-                </p>
-            </div>
+        <!-- IMPORTANT:
+             image.png is in the ROOT of GitHub repository -->
 
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>Digital Payments</h3>
-                <p>
-                    Use UPI and digital payments safely and confidently.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= LEARN ================= -->
-
-    <section id="learn" class="section">
-
-        <div class="section-title">
-
-            <span>📚</span>
-
-            <h2>Learn Financial Basics</h2>
-
-            <p>
-                Simple lessons to help you understand and manage money.
-            </p>
-
-        </div>
-
-
-        <div class="learning-grid">
-
-            <div class="learning-card">
-
-                <div class="learn-image">🐷</div>
-
-                <h3>Saving Money</h3>
-
-                <p>
-                    Understand why saving is important and how small
-                    savings can grow over time.
-                </p>
-
-                <button onclick="showTopic('saving')">
-                    Learn More →
-                </button>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="learn-image">📊</div>
-
-                <h3>Budgeting</h3>
-
-                <p>
-                    Learn how to plan your income and expenses and avoid
-                    unnecessary spending.
-                </p>
-
-                <button onclick="showTopic('budget')">
-                    Learn More →
-                </button>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="learn-image">🏦</div>
-
-                <h3>Banking</h3>
-
-                <p>
-                    Learn about savings accounts, deposits, interest and
-                    basic banking services.
-                </p>
-
-                <button onclick="showTopic('banking')">
-                    Learn More →
-                </button>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="learn-image">📱</div>
-
-                <h3>Digital Payments</h3>
-
-                <p>
-                    Learn how to use UPI and digital payment services safely.
-                </p>
-
-                <button onclick="showTopic('digital')">
-                    Learn More →
-                </button>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="learn-image">💰</div>
-
-                <h3>Loans & Interest</h3>
-
-                <p>
-                    Understand loans, interest and the importance of
-                    borrowing responsibly.
-                </p>
-
-                <button onclick="showTopic('loan')">
-                    Learn More →
-                </button>
-
-            </div>
-
-
-            <div class="learning-card">
-
-                <div class="learn-image">🔐</div>
-
-                <h3>Financial Safety</h3>
-
-                <p>
-                    Protect yourself from scams, fraud, fake calls and
-                    suspicious messages.
-                </p>
-
-                <button onclick="showTopic('safety')">
-                    Learn More →
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CALCULATOR ================= -->
-
-    <section id="calculator" class="calculator-section">
-
-        <div class="section-title">
-
-            <span>🧮</span>
-
-            <h2>Savings Calculator</h2>
-
-            <p>
-                Calculate how your savings can grow over time.
-            </p>
-
-        </div>
-
-
-        <div class="calculator-box">
-
-            <label>Monthly Saving (₹)</label>
-
-            <input
-                type="number"
-                id="monthlySaving"
-                placeholder="Example: 1000"
-            >
-
-            <label>Annual Interest Rate (%)</label>
-
-            <input
-                type="number"
-                id="interestRate"
-                placeholder="Example: 7"
-            >
-
-            <label>Saving Period (Years)</label>
-
-            <input
-                type="number"
-                id="savingYears"
-                placeholder="Example: 5"
-            >
-
-            <button onclick="calculateSavings()">
-                Calculate Savings
-            </button>
-
-            <div id="calculatorResult"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= QUIZ ================= -->
-
-    <section id="quiz" class="quiz-section">
-
-        <div class="section-title">
-
-            <span>📝</span>
-
-            <h2>Financial Literacy Quiz</h2>
-
-            <p>
-                Test your financial knowledge.
-            </p>
-
-        </div>
-
-
-        <div class="quiz-box">
-
-            <div class="quiz-progress">
-                <div id="progressBar"></div>
-            </div>
-
-            <p id="questionNumber">
-                Question 1 of 5
-            </p>
-
-            <h3 id="question">
-                Loading question...
-            </h3>
-
-            <div id="answers"></div>
-
-            <button
-                id="nextButton"
-                onclick="nextQuestion()"
-            >
-                Next Question
-            </button>
-
-            <div id="quizResult"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SAFETY ================= -->
-
-    <section id="safety" class="section safety-section">
-
-        <div class="section-title">
-
-            <span>🔐</span>
-
-            <h2>Stay Financially Safe</h2>
-
-            <p>
-                Follow these simple rules to protect your money.
-            </p>
-
-        </div>
-
-
-        <div class="safety-grid">
-
-            <div class="safety-card">
-                <span>🔑</span>
-                <h3>Never Share OTP</h3>
-                <p>
-                    Never share your OTP with anyone.
-                </p>
-            </div>
-
-            <div class="safety-card">
-                <span>📱</span>
-                <h3>Protect UPI PIN</h3>
-                <p>
-                    Never share your UPI PIN with anyone.
-                </p>
-            </div>
-
-            <div class="safety-card">
-                <span>📞</span>
-                <h3>Beware of Fake Calls</h3>
-                <p>
-                    Do not trust unknown callers asking for money.
-                </p>
-            </div>
-
-            <div class="safety-card">
-                <span>🔗</span>
-                <h3>Avoid Suspicious Links</h3>
-                <p>
-                    Do not click unknown financial links.
-                </p>
-            </div>
-
-            <div class="safety-card">
-                <span>🔒</span>
-                <h3>Use Strong Passwords</h3>
-                <p>
-                    Keep your accounts protected with strong passwords.
-                </p>
-            </div>
-
-            <div class="safety-card">
-                <span>🚨</span>
-                <h3>Report Fraud</h3>
-                <p>
-                    Report suspicious financial activity immediately.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="about-section">
-
-        <div class="section-title">
-
-            <span>🌱</span>
-
-            <h2>About MoneySmart Rural</h2>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <p>
-                MoneySmart Rural is a financial literacy website designed
-                to help rural students understand basic financial concepts
-                in a simple and practical way.
-            </p>
-
-            <p>
-                The website focuses on saving, budgeting, banking,
-                digital payments, loans, interest and financial safety.
-            </p>
-
-            <h3>Our Objectives</h3>
-
-            <ul>
-                <li>Improve basic financial awareness.</li>
-                <li>Encourage regular saving habits.</li>
-                <li>Teach simple budgeting skills.</li>
-                <li>Promote safe digital payments.</li>
-                <li>Create awareness about online financial fraud.</li>
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FEEDBACK ================= -->
-
-    <section class="feedback-section">
-
-        <div class="section-title">
-
-            <span>💬</span>
-
-            <h2>Give Your Feedback</h2>
-
-            <p>
-                Tell us what you think about MoneySmart Rural.
-            </p>
-
-        </div>
-
-
-        <form
-            class="feedback-form"
-            onsubmit="submitFeedback(event)"
+        <img
+            src="image.png"
+            alt="Rural students learning about financial literacy"
         >
 
-            <input
-                type="text"
-                id="feedbackName"
-                placeholder="Your Name"
-                required
-            >
+        <div class="image-overlay">
 
-            <input
-                type="email"
-                id="feedbackEmail"
-                placeholder="Your Email"
-                required
-            >
+            <h3>
+                Learn • Save • Grow
+            </h3>
 
-            <textarea
-                id="feedbackMessage"
-                placeholder="Your Feedback"
-                required
-            ></textarea>
+            <p>
+                Smart financial habits for a brighter future.
+            </p>
 
-            <button type="submit">
-                Submit Feedback
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="intro-section">
+
+    <div class="section-heading">
+
+        <span>💡</span>
+
+        <div>
+
+            <h2>
+                Learn Today, Secure Tomorrow
+            </h2>
+
+            <p>
+                Financial knowledge helps students make
+                better decisions about saving, spending
+                and using money safely.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🐷
+            </div>
+
+            <h3>
+                Saving
+            </h3>
+
+            <p>
+                Learn how to save money regularly and
+                build good financial habits.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Budgeting
+            </h3>
+
+            <p>
+                Understand income, expenses and how
+                to plan your money.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🏦
+            </div>
+
+            <h3>
+                Banking
+            </h3>
+
+            <p>
+                Learn about bank accounts, interest
+                and basic banking services.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Digital Payments
+            </h3>
+
+            <p>
+                Use UPI and digital payments safely
+                and confidently.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARN SECTION
+===================================================== -->
+
+<section id="learn" class="section">
+
+    <div class="section-title">
+
+        <span>📚</span>
+
+        <h2>
+            Learn Financial Basics
+        </h2>
+
+        <p>
+            Simple lessons to help you understand
+            and manage money.
+        </p>
+
+    </div>
+
+
+    <div class="learning-grid">
+
+
+        <!-- SAVING -->
+
+        <div class="learning-card">
+
+            <div class="learn-image">
+                🐷
+            </div>
+
+            <h3>
+                Saving Money
+            </h3>
+
+            <p>
+                Understand why saving is important and
+                how small savings can grow over time.
+            </p>
+
+            <button onclick="showTopic('saving')">
+                Learn More →
             </button>
 
-        </form>
-
-    </section>
+        </div>
 
 
-    <!-- ================= FOOTER ================= -->
+        <!-- BUDGETING -->
 
-    <footer>
+        <div class="learning-card">
 
-        <h3>🌱 MoneySmart Rural</h3>
+            <div class="learn-image">
+                📊
+            </div>
+
+            <h3>
+                Budgeting
+            </h3>
+
+            <p>
+                Learn how to plan your income and expenses
+                and avoid unnecessary spending.
+            </p>
+
+            <button onclick="showTopic('budget')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <!-- BANKING -->
+
+        <div class="learning-card">
+
+            <div class="learn-image">
+                🏦
+            </div>
+
+            <h3>
+                Banking
+            </h3>
+
+            <p>
+                Learn about savings accounts, deposits,
+                interest and basic banking services.
+            </p>
+
+            <button onclick="showTopic('banking')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <!-- DIGITAL PAYMENTS -->
+
+        <div class="learning-card">
+
+            <div class="learn-image">
+                📱
+            </div>
+
+            <h3>
+                Digital Payments
+            </h3>
+
+            <p>
+                Learn how to use UPI and digital payment
+                services safely.
+            </p>
+
+            <button onclick="showTopic('digital')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <!-- LOANS -->
+
+        <div class="learning-card">
+
+            <div class="learn-image">
+                💰
+            </div>
+
+            <h3>
+                Loans & Interest
+            </h3>
+
+            <p>
+                Understand loans, interest and the
+                importance of borrowing responsibly.
+            </p>
+
+            <button onclick="showTopic('loan')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <!-- FINANCIAL SAFETY -->
+
+        <div class="learning-card">
+
+            <div class="learn-image">
+                🔐
+            </div>
+
+            <h3>
+                Financial Safety
+            </h3>
+
+            <p>
+                Protect yourself from scams, fraud,
+                fake calls and suspicious messages.
+            </p>
+
+            <button onclick="showTopic('safety')">
+                Learn More →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SAVINGS CALCULATOR
+===================================================== -->
+
+<section id="calculator" class="calculator-section">
+
+    <div class="section-title">
+
+        <span>🧮</span>
+
+        <h2>
+            Savings Calculator
+        </h2>
+
+        <p>
+            Calculate how your savings can grow over time.
+        </p>
+
+    </div>
+
+
+    <div class="calculator-box">
+
+        <label>
+            Monthly Saving (₹)
+        </label>
+
+        <input
+            type="number"
+            id="monthlySaving"
+            placeholder="Example: 1000"
+        >
+
+
+        <label>
+            Annual Interest Rate (%)
+        </label>
+
+        <input
+            type="number"
+            id="interestRate"
+            placeholder="Example: 7"
+        >
+
+
+        <label>
+            Saving Period (Years)
+        </label>
+
+        <input
+            type="number"
+            id="savingYears"
+            placeholder="Example: 5"
+        >
+
+
+        <button onclick="calculateSavings()">
+            Calculate Savings
+        </button>
+
+
+        <div id="calculatorResult"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUIZ
+===================================================== -->
+
+<section id="quiz" class="quiz-section">
+
+    <div class="section-title">
+
+        <span>📝</span>
+
+        <h2>
+            Financial Literacy Quiz
+        </h2>
+
+        <p>
+            Test your financial knowledge.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-box">
+
+        <div class="quiz-progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+
+        <p id="questionNumber">
+            Question 1 of 5
+        </p>
+
+
+        <h3 id="question">
+            Loading question...
+        </h3>
+
+
+        <div id="answers">
+
+            <button onclick="selectAnswer(0)">
+                Option 1
+            </button>
+
+            <button onclick="selectAnswer(1)">
+                Option 2
+            </button>
+
+            <button onclick="selectAnswer(2)">
+                Option 3
+            </button>
+
+            <button onclick="selectAnswer(3)">
+                Option 4
+            </button>
+
+        </div>
+
+
+        <button
+            id="nextButton"
+            onclick="nextQuestion()"
+        >
+            Next →
+        </button>
+
+
+        <div id="quizResult"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SAFETY
+===================================================== -->
+
+<section id="safety" class="section safety-section">
+
+    <div class="section-title">
+
+        <span>🛡️</span>
+
+        <h2>
+            Financial Safety
+        </h2>
+
+        <p>
+            Protect your money and personal information.
+        </p>
+
+    </div>
+
+
+    <div class="safety-grid">
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                🔐
+            </div>
+
+            <h3>
+                Never Share OTP
+            </h3>
+
+            <p>
+                Never share your OTP with anyone,
+                even if they claim to be from a bank.
+            </p>
+
+        </div>
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                📱
+            </div>
+
+            <h3>
+                Protect UPI PIN
+            </h3>
+
+            <p>
+                Keep your UPI PIN private and
+                never share it with anyone.
+            </p>
+
+        </div>
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                ☎️
+            </div>
+
+            <h3>
+                Beware of Fake Calls
+            </h3>
+
+            <p>
+                Do not trust unknown callers asking
+                for bank or payment information.
+            </p>
+
+        </div>
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                🔗
+            </div>
+
+            <h3>
+                Avoid Suspicious Links
+            </h3>
+
+            <p>
+                Do not click unknown links received
+                through messages or emails.
+            </p>
+
+        </div>
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                🔑
+            </div>
+
+            <h3>
+                Use Strong Passwords
+            </h3>
+
+            <p>
+                Use strong passwords and avoid
+                sharing them with others.
+            </p>
+
+        </div>
+
+
+        <div class="safety-card">
+
+            <div class="safety-icon">
+                🚨
+            </div>
+
+            <h3>
+                Report Fraud
+            </h3>
+
+            <p>
+                If you notice suspicious activity,
+                report it immediately.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="section about-section">
+
+    <div class="section-title">
+
+        <span>🌱</span>
+
+        <h2>
+            About MoneySmart Rural
+        </h2>
+
+        <p>
+            Financial literacy for a better future.
+        </p>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <h3>
+            Our Project
+        </h3>
+
+        <p>
+            MoneySmart Rural is a financial literacy
+            awareness website designed especially for
+            rural students.
+        </p>
+
+        <p>
+            The website provides simple and practical
+            information about saving, budgeting, banking,
+            digital payments, loans and financial safety.
+        </p>
+
+
+        <h3>
+            Project Objectives
+        </h3>
+
+        <ul>
+
+            <li>
+                Improve basic financial awareness.
+            </li>
+
+            <li>
+                Encourage regular saving habits.
+            </li>
+
+            <li>
+                Teach simple budgeting techniques.
+            </li>
+
+            <li>
+                Promote safe digital payments.
+            </li>
+
+            <li>
+                Create awareness about online financial fraud.
+            </li>
+
+            <li>
+                Encourage responsible financial decisions.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEEDBACK
+===================================================== -->
+
+<section class="feedback-section">
+
+    <div class="section-title">
+
+        <span>💬</span>
+
+        <h2>
+            Share Your Feedback
+        </h2>
+
+        <p>
+            Tell us what you think about MoneySmart Rural.
+        </p>
+
+    </div>
+
+
+    <form
+        id="feedbackForm"
+        onsubmit="submitFeedback(event)"
+    >
+
+        <input
+            type="text"
+            id="feedbackName"
+            placeholder="Your Name"
+            required
+        >
+
+
+        <input
+            type="email"
+            id="feedbackEmail"
+            placeholder="Your Email"
+            required
+        >
+
+
+        <textarea
+            id="feedbackMessage"
+            placeholder="Write your feedback..."
+            rows="5"
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Submit Feedback
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>
+            🌱 MoneySmart Rural
+        </h2>
 
         <p>
             Financial Literacy for Rural Students
         </p>
 
         <p>
-            © 2026 MoneySmart Rural. All Rights Reserved.
+            Learn • Save • Grow • Stay Safe
         </p>
 
-    </footer>
+    </div>
 
 
-    <!-- ================= LOGIN ================= -->
+    <div class="footer-bottom">
 
-    <div id="loginModal" class="modal">
+        <p>
+            © 2026 MoneySmart Rural. Educational Project.
+        </p>
 
-        <div class="modal-content">
+    </div>
 
-            <span
-                class="close"
-                onclick="closeModals()"
-            >
-                &times;
-            </span>
+</footer>
 
-            <h2>Login</h2>
 
-            <p>Login to MoneySmart Rural</p>
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div
+    id="loginModal"
+    class="modal"
+>
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeModals()"
+        >
+            &times;
+        </span>
+
+
+        <h2>
+            🔐 Login
+        </h2>
+
+        <p>
+            Login to MoneySmart Rural
+        </p>
+
+
+        <form onsubmit="loginUser(event)">
 
             <input
                 type="email"
                 id="loginEmail"
-                placeholder="Email"
+                placeholder="Email Address"
+                required
             >
+
 
             <input
                 type="password"
                 id="loginPassword"
                 placeholder="Password"
+                required
             >
 
-            <button onclick="loginUser()">
+
+            <button type="submit">
                 Login
             </button>
 
-            <p>
-                Don't have an account?
+        </form>
 
-                <span
-                    class="modal-link"
-                    onclick="switchToRegister()"
-                >
-                    Register
-                </span>
-            </p>
 
-        </div>
+        <p class="modal-switch">
+
+            Don't have an account?
+
+            <button
+                onclick="switchToRegister()"
+            >
+                Register
+            </button>
+
+        </p>
 
     </div>
 
+</div>
 
-    <!-- ================= REGISTER ================= -->
 
-    <div id="registerModal" class="modal">
 
-        <div class="modal-content">
+<!-- =====================================================
+     REGISTER MODAL
+===================================================== -->
 
-            <span
-                class="close"
-                onclick="closeModals()"
-            >
-                &times;
-            </span>
+<div
+    id="registerModal"
+    class="modal"
+>
 
-            <h2>Create Account</h2>
+    <div class="modal-content">
 
-            <p>Register for MoneySmart Rural</p>
+        <span
+            class="close"
+            onclick="closeModals()"
+        >
+            &times;
+        </span>
+
+
+        <h2>
+            📝 Register
+        </h2>
+
+        <p>
+            Create your MoneySmart Rural account
+        </p>
+
+
+        <form onsubmit="registerUser(event)">
 
             <input
                 type="text"
                 id="registerName"
                 placeholder="Full Name"
+                required
             >
+
 
             <input
                 type="email"
                 id="registerEmail"
-                placeholder="Email"
+                placeholder="Email Address"
+                required
             >
+
 
             <input
                 type="password"
                 id="registerPassword"
                 placeholder="Password"
+                required
             >
+
 
             <input
                 type="password"
                 id="confirmPassword"
                 placeholder="Confirm Password"
+                required
             >
 
-            <button onclick="registerUser()">
-                Register
+
+            <button type="submit">
+                Create Account
             </button>
 
-            <p>
-                Already have an account?
-
-                <span
-                    class="modal-link"
-                    onclick="switchToLogin()"
-                >
-                    Login
-                </span>
-            </p>
-
-        </div>
-
-    </div>
+        </form>
 
 
-    <!-- ================= TOPIC POPUP ================= -->
+        <p class="modal-switch">
 
-    <div id="topicModal" class="modal">
+            Already have an account?
 
-        <div class="modal-content topic-content">
-
-            <span
-                class="close"
-                onclick="closeTopic()"
+            <button
+                onclick="switchToLogin()"
             >
-                &times;
-            </span>
+                Login
+            </button>
 
-            <h2 id="topicTitle">
-                Financial Topic
-            </h2>
+        </p>
 
-            <p id="topicText">
-                Learn more about this topic.
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOPIC MODAL
+===================================================== -->
+
+<div
+    id="topicModal"
+    class="modal"
+>
+
+    <div class="modal-content topic-modal">
+
+        <span
+            class="close"
+            onclick="closeTopic()"
+        >
+            &times;
+        </span>
+
+
+        <h2 id="topicTitle">
+            Financial Topic
+        </h2>
+
+
+        <div id="topicContent">
+
+            <p>
+                Learn important financial concepts
+                in a simple way.
             </p>
 
         </div>
 
     </div>
 
+</div>
 
-    <!-- ================= JAVASCRIPT ================= -->
 
-    <script src="script.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+<!-- =====================================================
+     FALLBACK TOPIC FUNCTIONS
+     These make the Learn More buttons work even if
+     your current script.js does not contain them.
+===================================================== -->
+
+<script>
+
+function showTopic(topic) {
+
+    const modal = document.getElementById("topicModal");
+    const title = document.getElementById("topicTitle");
+    const content = document.getElementById("topicContent");
+
+    const topics = {
+
+        saving: {
+
+            title: "🐷 Saving Money",
+
+            text: `
+                <p>
+                    Saving means keeping a part of your
+                    income or pocket money for future needs.
+                </p>
+
+                <ul>
+                    <li>Save a small amount regularly.</li>
+                    <li>Set a clear savings goal.</li>
+                    <li>Avoid unnecessary spending.</li>
+                    <li>Keep emergency savings.</li>
+                </ul>
+            `
+
+        },
+
+
+        budget: {
+
+            title: "📊 Budgeting",
+
+            text: `
+                <p>
+                    A budget is a simple plan for how you
+                    will use your money.
+                </p>
+
+                <ul>
+                    <li>Track your income.</li>
+                    <li>Track your expenses.</li>
+                    <li>Separate needs from wants.</li>
+                    <li>Keep some money for savings.</li>
+                </ul>
+            `
+
+        },
+
+
+        banking: {
+
+            title: "🏦 Banking",
+
+            text: `
+                <p>
+                    Banks help people safely store and
+                    manage their money.
+                </p>
+
+                <ul>
+                    <li>Understand your bank account.</li>
+                    <li>Learn about deposits.</li>
+                    <li>Understand interest.</li>
+                    <li>Keep banking information private.</li>
+                </ul>
+            `
+
+        },
+
+
+        digital: {
+
+            title: "📱 Digital Payments",
+
+            text: `
+                <p>
+                    Digital payments make sending and
+                    receiving money convenient.
+                </p>
+
+                <ul>
+                    <li>Use trusted payment applications.</li>
+                    <li>Never share your UPI PIN.</li>
+                    <li>Never share OTPs.</li>
+                    <li>Check the receiver before paying.</li>
+                </ul>
+            `
+
+        },
+
+
+        loan: {
+
+            title: "💰 Loans & Interest",
+
+            text: `
+                <p>
+                    A loan is money borrowed from a bank
+                    or financial institution that must be
+                    repaid.
+                </p>
+
+                <ul>
+                    <li>Understand the loan amount.</li>
+                    <li>Understand the interest rate.</li>
+                    <li>Check repayment conditions.</li>
+                    <li>Borrow only when necessary.</li>
+                </ul>
+            `
+
+        },
+
+
+        safety: {
+
+            title: "🔐 Financial Safety",
+
+            text: `
+                <p>
+                    Financial safety means protecting your
+                    money and personal information.
+                </p>
+
+                <ul>
+                    <li>Never share OTP.</li>
+                    <li>Never share UPI PIN.</li>
+                    <li>Avoid suspicious links.</li>
+                    <li>Beware of fake calls.</li>
+                    <li>Use strong passwords.</li>
+                </ul>
+            `
+
+        }
+
+    };
+
+
+    if (topics[topic]) {
+
+        title.innerHTML = topics[topic].title;
+
+        content.innerHTML = topics[topic].text;
+
+        modal.style.display = "flex";
+
+    }
+
+}
+
+
+function closeTopic() {
+
+    document.getElementById("topicModal").style.display = "none";
+
+}
+
+
+window.addEventListener("click", function(event) {
+
+    const topicModal = document.getElementById("topicModal");
+
+    if (event.target === topicModal) {
+
+        topicModal.style.display = "none";
+
+    }
+
+});
+
+</script>
+
 
 </body>
-
 </html>
