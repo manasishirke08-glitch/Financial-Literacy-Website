@@ -1,0 +1,1304 @@
+/* =====================================================
+   MONEYSMART RURAL - MAIN STYLESHEET
+   ===================================================== */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7fbf7;
+    color: #173b32;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 78px;
+    padding: 12px 5%;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e5eee8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 35px;
+}
+
+.logo h2 {
+    color: #087f5b;
+    font-size: 1.35rem;
+    line-height: 1.1;
+}
+
+.logo small {
+    color: #668077;
+    font-size: 0.72rem;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 22px;
+}
+
+.navbar nav a {
+    color: #24483e;
+    font-weight: 600;
+    font-size: 0.93rem;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #087f5b;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn {
+    border: none;
+    color: white;
+    background: #087f5b;
+}
+
+.login-btn:hover {
+    background: #056548;
+    transform: translateY(-2px);
+}
+
+.register-btn {
+    border: 2px solid #087f5b;
+    background: white;
+    color: #087f5b;
+}
+
+.register-btn:hover {
+    background: #087f5b;
+    color: white;
+}
+
+
+/* =====================================================
+   HOME / HERO
+   ===================================================== */
+
+.hero {
+    min-height: 620px;
+    padding: 70px 6%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+
+    background:
+        radial-gradient(circle at 10% 20%, #e5f7df 0%, transparent 30%),
+        linear-gradient(135deg, #f8fff5, #edf8f1);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome-text {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #087f5b;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    color: #173b32;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #087f5b;
+}
+
+.hero-content > p {
+    max-width: 620px;
+    color: #536d64;
+    font-size: 1.08rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #087f5b;
+    color: white;
+    box-shadow: 0 10px 25px rgba(8, 127, 91, 0.2);
+}
+
+.primary-btn:hover {
+    background: #056548;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: white;
+    color: #087f5b;
+    border: 2px solid #087f5b;
+}
+
+.secondary-btn:hover {
+    background: #087f5b;
+    color: white;
+}
+
+
+/* ---------- HERO HIGHLIGHTS ---------- */
+
+.hero-highlights {
+    margin-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.hero-highlights div {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 7px;
+
+    align-items: center;
+
+    color: #087f5b;
+}
+
+.hero-highlights div:first-child {
+    font-size: 1.4rem;
+}
+
+.hero-highlights strong {
+    font-size: 0.9rem;
+}
+
+.hero-highlights small {
+    grid-column: 2;
+    color: #71857d;
+    font-size: 0.72rem;
+}
+
+
+/* =====================================================
+   RURAL STUDENT HERO IMAGE
+   ===================================================== */
+
+.hero-image-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 430px;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 25px 60px rgba(27, 87, 63, 0.18);
+
+    transition: 0.4s;
+}
+
+.hero-image-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 30px 70px rgba(27, 87, 63, 0.23);
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+.hero-image-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ---------- IMAGE OVERLAY ---------- */
+
+.image-overlay {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+
+    padding: 18px 22px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.image-overlay h3 {
+    color: #087f5b;
+    font-size: 1.35rem;
+    margin-bottom: 3px;
+}
+
+.image-overlay p {
+    color: #526960;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+   ===================================================== */
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span,
+.section-label {
+    color: #087f5b;
+    font-weight: bold;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    margin: 8px 0 12px;
+    font-size: 2.3rem;
+    color: #173b32;
+}
+
+.section-heading p {
+    color: #6b7f77;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.intro-section {
+    padding: 80px 7%;
+    background: white;
+}
+
+.intro-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 50px;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 18px;
+}
+
+.intro-text h2 span {
+    color: #087f5b;
+}
+
+.intro-text p {
+    color: #61756d;
+    margin-bottom: 12px;
+}
+
+.intro-icon {
+    width: 190px;
+    height: 190px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5rem;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(145deg, #e9f8df, #dff4e9);
+
+    box-shadow: 0 20px 40px rgba(8, 127, 91, 0.12);
+}
+
+
+/* =====================================================
+   FEATURES
+   ===================================================== */
+
+.features-section {
+    padding: 85px 6%;
+    background: #f4faf5;
+}
+
+.feature-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px 22px;
+
+    background: white;
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #e2eee7;
+
+    box-shadow: 0 8px 25px rgba(27, 87, 63, 0.05);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px rgba(27, 87, 63, 0.12);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #e7f6e6;
+
+    font-size: 2rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 8px;
+    color: #173b32;
+}
+
+.feature-card p {
+    color: #6c7e76;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   LEARN SECTION
+   ===================================================== */
+
+.learn-section {
+    padding: 90px 6%;
+    background: white;
+}
+
+.learn-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.learn-card {
+    overflow: hidden;
+
+    border-radius: 22px;
+    background: white;
+
+    border: 1px solid #e4eee8;
+
+    box-shadow: 0 10px 30px rgba(27, 87, 63, 0.07);
+
+    transition: 0.35s;
+}
+
+.learn-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(27, 87, 63, 0.13);
+}
+
+
+/* ---------- LEARN IMAGE AREA ---------- */
+
+.learn-image {
+    height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+
+    border-bottom: 1px solid #e4eee8;
+}
+
+.saving-card .learn-image {
+    background: #edf9e9;
+}
+
+.budgeting-card .learn-image {
+    background: #eaf6ff;
+}
+
+.banking-card .learn-image {
+    background: #fff7df;
+}
+
+.payment-card .learn-image {
+    background: #f4edff;
+}
+
+.loan-card .learn-image {
+    background: #e8f8f6;
+}
+
+.safety-card .learn-image {
+    background: #fff0f1;
+}
+
+
+/* ---------- LEARN CONTENT ---------- */
+
+.learn-content {
+    padding: 24px;
+}
+
+.learn-content h3 {
+    color: #173b32;
+    margin-bottom: 9px;
+    font-size: 1.2rem;
+}
+
+.learn-content p {
+    color: #6a7d75;
+    font-size: 0.9rem;
+    min-height: 70px;
+}
+
+.learn-content button {
+    border: none;
+    background: none;
+
+    color: #087f5b;
+    font-weight: bold;
+
+    padding: 0;
+
+    margin-top: 10px;
+
+    transition: 0.3s;
+}
+
+.learn-content button:hover {
+    color: #056548;
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   CALCULATOR
+   ===================================================== */
+
+.calculator-section {
+    padding: 90px 6%;
+    background: #f4faf5;
+}
+
+.calculator-box {
+    max-width: 950px;
+    margin: auto;
+
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(27, 87, 63, 0.09);
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-form label {
+    margin: 10px 0 6px;
+    color: #36584e;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.calculator-form input {
+    padding: 13px 15px;
+
+    border: 1px solid #d7e5dd;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+.calculator-form input:focus {
+    border-color: #087f5b;
+}
+
+.calculator-form button {
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #087f5b;
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.calculator-form button:hover {
+    background: #056548;
+}
+
+.calculator-result {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(145deg, #eaf8e8, #e2f4ec);
+}
+
+.calculator-result h3 {
+    color: #31564b;
+}
+
+#result {
+    margin: 15px 0;
+
+    color: #087f5b;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.calculator-result p {
+    color: #668077;
+}
+
+
+/* =====================================================
+   QUIZ
+   ===================================================== */
+
+.quiz-section {
+    padding: 90px 6%;
+    background: white;
+}
+
+.quiz-box {
+    max-width: 750px;
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #f5faf6;
+
+    border: 1px solid #e0ece5;
+
+    text-align: center;
+}
+
+.quiz-progress {
+    height: 9px;
+
+    background: #dce9e2;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+
+    background: #087f5b;
+
+    transition: 0.3s;
+}
+
+#questionNumber {
+    color: #71857d;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+#question {
+    color: #173b32;
+    margin-bottom: 25px;
+}
+
+.answers {
+    display: grid;
+    gap: 12px;
+}
+
+.answers button {
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d4e3dc;
+
+    background: white;
+
+    color: #31564b;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.answers button:hover {
+    border-color: #087f5b;
+    background: #eef9f1;
+}
+
+.next-btn {
+    margin-top: 22px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #087f5b;
+    color: white;
+
+    font-weight: bold;
+}
+
+.quiz-result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   SAFETY
+   ===================================================== */
+
+.safety-section {
+    padding: 90px 6%;
+    background: #f4faf5;
+}
+
+.safety-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.safety-card {
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #e2eee7;
+
+    transition: 0.3s;
+}
+
+.safety-card:hover {
+    transform: translateY(-5px);
+}
+
+.safety-card > div {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.safety-card h3 {
+    margin-bottom: 8px;
+}
+
+.safety-card p {
+    color: #6c7e76;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+.about-section {
+    padding: 90px 7%;
+    background: white;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content h2 {
+    margin: 10px 0 20px;
+
+    font-size: 2.5rem;
+}
+
+.about-content h2 span {
+    color: #087f5b;
+}
+
+.about-content p {
+    color: #667a72;
+    margin-bottom: 14px;
+}
+
+.objectives {
+    padding: 30px;
+
+    border-radius: 22px;
+
+    background: #f2faf3;
+
+    border: 1px solid #dfede3;
+}
+
+.objectives h3 {
+    margin-bottom: 15px;
+    color: #087f5b;
+}
+
+.objectives ul {
+    list-style: none;
+}
+
+.objectives li {
+    padding: 7px 0;
+    color: #4e6a60;
+}
+
+
+/* =====================================================
+   FEEDBACK
+   ===================================================== */
+
+.feedback-section {
+    padding: 90px 6%;
+    background: #f4faf5;
+}
+
+.feedback-form {
+    max-width: 650px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d8e6de;
+    border-radius: 12px;
+
+    background: white;
+
+    outline: none;
+}
+
+.feedback-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #087f5b;
+}
+
+.feedback-form button {
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #087f5b;
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 35px 6%;
+
+    background: #123b30;
+
+    color: white;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content h3 {
+    color: #bde8c8;
+    margin-bottom: 5px;
+}
+
+.footer-content p {
+    color: #c8d9d2;
+}
+
+.footer-content small {
+    color: #9fb5ad;
+}
+
+
+/* =====================================================
+   MODALS
+   ===================================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    background: rgba(10, 40, 30, 0.6);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+
+    right: 15px;
+    top: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eef5f0;
+
+    color: #45675c;
+
+    font-size: 1.4rem;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.modal-content h2 {
+    color: #173b32;
+}
+
+.modal-content > p {
+    color: #71857d;
+    margin: 5px 0 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-content input {
+    padding: 13px;
+
+    border: 1px solid #d7e5dd;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+.modal-content input:focus {
+    border-color: #087f5b;
+}
+
+.modal-content form button,
+.topic-modal > button {
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #087f5b;
+    color: white;
+
+    font-weight: bold;
+}
+
+.switch-text {
+    margin-top: 18px !important;
+    font-size: 0.9rem;
+}
+
+.switch-text button {
+    border: none;
+    background: none;
+
+    color: #087f5b;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learn-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        padding-top: 5px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-highlights {
+        justify-content: center;
+    }
+
+    .hero-image-card {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .intro-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .calculator-box {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .logo h2 {
+        font-size: 1.05rem;
+    }
+
+    .logo small {
+        font-size: 0.62rem;
+    }
+
+    .nav-buttons {
+        gap: 5px;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        padding: 45px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-image-card {
+        min-height: 330px;
+        border-radius: 22px;
+    }
+
+    .hero-image-card img {
+        min-height: 330px;
+    }
+
+    .image-overlay {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 14px;
+    }
+
+    .image-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .image-overlay p {
+        font-size: 0.8rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-grid,
+    .learn-grid,
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-text h2,
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .calculator-box {
+        padding: 22px;
+    }
+
+    .quiz-box {
+        padding: 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

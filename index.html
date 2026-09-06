@@ -2,2133 +2,740 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>MoneySmart Rural | Financial Literacy</title>
 
-    <title>MoneySmart Rural</title>
-
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8f6;
-            color: #24332b;
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        nav {
-            background: #075e54;
-            color: white;
-
-            padding: 15px 7%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            position: sticky;
-            top: 0;
-
-            z-index: 1000;
-
-            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-        }
-
-
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-        }
-
-
-        nav ul {
-            list-style: none;
-
-            display: flex;
-            gap: 20px;
-
-            align-items: center;
-        }
-
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-
-        nav a:hover {
-            color: #ffd166;
-        }
-
-
-        .nav-button {
-            background: #ffd166;
-            color: #222 !important;
-
-            padding: 8px 15px;
-
-            border-radius: 20px;
-        }
-
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        section {
-            padding: 70px 8%;
-        }
-
-
-        .section-title {
-            text-align: center;
-
-            color: #075e54;
-
-            font-size: 34px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .section-subtitle {
-            text-align: center;
-
-            color: #68756e;
-
-            margin-bottom: 35px;
-        }
-
-
-        .btn {
-            background: #075e54;
-
-            color: white;
-
-            border: none;
-
-            padding: 13px 25px;
-
-            border-radius: 25px;
-
-            cursor: pointer;
-
-            font-size: 16px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-
-        .btn:hover {
-            background: #064c44;
-
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           HOME
-        ========================= */
-
-        .hero {
-            min-height: 85vh;
-
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 50px 20px;
-
-            background:
-            linear-gradient(
-                135deg,
-                #d8f3dc,
-                #f5f8f6
-            );
-        }
-
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-
-        .hero h1 {
-            font-size: 48px;
-
-            color: #075e54;
-
-            margin-bottom: 20px;
-        }
-
-
-        .hero p {
-            font-size: 20px;
-
-            color: #52645a;
-
-            margin-bottom: 30px;
-        }
-
-
-        /* =========================
-           LEARNING CARDS
-        ========================= */
-
-        .cards {
-            display: grid;
-
-            grid-template-columns:
-            repeat(4, 1fr);
-
-            gap: 22px;
-        }
-
-
-        .card {
-            background: white;
-
-            padding: 28px 20px;
-
-            border-radius: 15px;
-
-            text-align: center;
-
-            box-shadow:
-            0 5px 20px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-
-        .card:hover {
-            transform: translateY(-7px);
-        }
-
-
-        .card-icon {
-            font-size: 45px;
-
-            margin-bottom: 12px;
-        }
-
-
-        .card h3 {
-            color: #075e54;
-
-            margin-bottom: 10px;
-        }
-
-
-        .card p {
-            color: #65736b;
-        }
-
-
-        /* =========================
-           LOGIN / REGISTER
-        ========================= */
-
-        .auth-section {
-            min-height: 80vh;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            background: #eaf7ee;
-        }
-
-
-        .auth-container {
-            width: 100%;
-
-            max-width: 450px;
-
-            background: white;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            box-shadow:
-            0 8px 30px rgba(0,0,0,0.12);
-        }
-
-
-        .auth-container h2 {
-            text-align: center;
-
-            color: #075e54;
-
-            margin-bottom: 25px;
-        }
-
-
-        .form-group {
-            margin-bottom: 17px;
-        }
-
-
-        .form-group label {
-            display: block;
-
-            font-weight: bold;
-
-            margin-bottom: 6px;
-        }
-
-
-        .form-group input {
-            width: 100%;
-
-            padding: 12px;
-
-            border: 1px solid #ccd7d1;
-
-            border-radius: 8px;
-
-            font-size: 15px;
-        }
-
-
-        .auth-container .btn {
-            width: 100%;
-
-            margin-top: 10px;
-        }
-
-
-        .auth-switch {
-            text-align: center;
-
-            margin-top: 20px;
-        }
-
-
-        .auth-switch a {
-            color: #075e54;
-
-            font-weight: bold;
-
-            cursor: pointer;
-        }
-
-
-        .error-message {
-            color: #d32f2f;
-
-            text-align: center;
-
-            margin-top: 12px;
-        }
-
-
-        .success-message {
-            color: #198754;
-
-            text-align: center;
-
-            margin-top: 12px;
-        }
-
-
-        /* =========================
-           DASHBOARD
-        ========================= */
-
-        #dashboard {
-            background: #f0f8f3;
-        }
-
-
-        .dashboard-container {
-            max-width: 1000px;
-
-            margin: auto;
-        }
-
-
-        .welcome-box {
-            background: #075e54;
-
-            color: white;
-
-            padding: 30px;
-
-            border-radius: 18px;
-
-            margin-bottom: 25px;
-
-            text-align: center;
-        }
-
-
-        .welcome-box h2 {
-            margin-bottom: 10px;
-        }
-
-
-        .dashboard-cards {
-            display: grid;
-
-            grid-template-columns:
-            repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .dashboard-card {
-            background: white;
-
-            padding: 25px;
-
-            border-radius: 15px;
-
-            text-align: center;
-
-            box-shadow:
-            0 5px 18px rgba(0,0,0,0.08);
-        }
-
-
-        .dashboard-card h3 {
-            color: #075e54;
-
-            margin-bottom: 10px;
-        }
-
-
-        /* =========================
-           CALCULATOR
-        ========================= */
-
-        .calculator-section {
-            background: #eaf7ee;
-        }
-
-
-        .calculator-box {
-            max-width: 550px;
-
-            margin: auto;
-
-            background: white;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            box-shadow:
-            0 8px 25px rgba(0,0,0,0.1);
-        }
-
-
-        .calculator-box label {
-            display: block;
-
-            margin-top: 15px;
-
-            margin-bottom: 7px;
-
-            font-weight: bold;
-        }
-
-
-        .calculator-box input {
-            width: 100%;
-
-            padding: 13px;
-
-            border: 1px solid #ccd7d1;
-
-            border-radius: 8px;
-
-            font-size: 16px;
-        }
-
-
-        .calculator-box .btn {
-            width: 100%;
-
-            margin-top: 20px;
-        }
-
-
-        #result {
-            margin-top: 20px;
-
-            padding: 15px;
-
-            border-radius: 10px;
-
-            background: #e8f5e9;
-
-            color: #075e54;
-
-            font-weight: bold;
-
-            text-align: center;
-        }
-
-
-        /* =========================
-           QUIZ
-        ========================= */
-
-        .quiz-box {
-            max-width: 750px;
-
-            margin: auto;
-
-            background: white;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            box-shadow:
-            0 8px 25px rgba(0,0,0,0.1);
-        }
-
-
-        .question {
-            margin-bottom: 30px;
-        }
-
-
-        .question h3 {
-            color: #075e54;
-
-            margin-bottom: 15px;
-        }
-
-
-        .option {
-            display: block;
-
-            padding: 12px;
-
-            margin: 8px 0;
-
-            border: 1px solid #d5ded9;
-
-            border-radius: 8px;
-
-            cursor: pointer;
-        }
-
-
-        .option:hover {
-            background: #eef8f1;
-        }
-
-
-        #quizResult {
-            margin-top: 20px;
-
-            padding: 15px;
-
-            text-align: center;
-
-            font-weight: bold;
-
-            border-radius: 10px;
-        }
-
-
-        /* =========================
-           SAFETY
-        ========================= */
-
-        .safety {
-            background: #fff8e6;
-        }
-
-
-        .safety-list {
-            max-width: 850px;
-
-            margin: auto;
-
-            display: grid;
-
-            gap: 15px;
-        }
-
-
-        .safety-item {
-            background: white;
-
-            padding: 18px;
-
-            border-radius: 10px;
-
-            box-shadow:
-            0 3px 12px rgba(0,0,0,0.06);
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-            max-width: 900px;
-
-            margin: auto;
-
-            background: white;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            text-align: center;
-
-            box-shadow:
-            0 5px 20px rgba(0,0,0,0.08);
-        }
-
-
-        .about-box p {
-            margin-bottom: 15px;
-
-            color: #596960;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #075e54;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 25px;
-        }
-
-
-        /* =========================
-           HIDDEN
-        ========================= */
-
-        .hidden {
-            display: none;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .cards {
-                grid-template-columns:
-                repeat(2, 1fr);
-            }
-
-
-            .dashboard-cards {
-                grid-template-columns:
-                repeat(2, 1fr);
-            }
-
-
-            nav {
-                flex-direction: column;
-
-                gap: 12px;
-            }
-
-
-            nav ul {
-                flex-wrap: wrap;
-
-                justify-content: center;
-            }
-        }
-
-
-        @media (max-width: 600px) {
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-
-            .hero p {
-                font-size: 17px;
-            }
-
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-
-            .dashboard-cards {
-                grid-template-columns: 1fr;
-            }
-
-
-            nav ul {
-                gap: 10px;
-
-                font-size: 13px;
-            }
-
-
-            section {
-                padding: 50px 5%;
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <header class="navbar">
 
-<nav>
+        <div class="logo">
+            <span class="logo-icon">🌱</span>
 
-    <div class="logo">
-        💰 MoneySmart Rural
-    </div>
+            <div>
+                <h2>MoneySmart Rural</h2>
+                <p>Learn • Save • Grow • Stay Safe</p>
+            </div>
+        </div>
 
-
-    <ul>
-
-        <li>
+        <nav>
             <a href="#home">Home</a>
-        </li>
-
-        <li>
             <a href="#learn">Learn</a>
-        </li>
-
-        <li>
             <a href="#calculator">Calculator</a>
-        </li>
-
-        <li>
             <a href="#quiz">Quiz</a>
-        </li>
-
-        <li>
             <a href="#safety">Safety</a>
-        </li>
-
-        <li>
             <a href="#about">About</a>
-        </li>
+        </nav>
 
-        <li id="loginNav">
-            <a href="#login"
-               class="nav-button">
-                Login
-            </a>
-        </li>
+        <div class="nav-buttons">
+            <button class="btn login-btn" onclick="openLogin()">Login</button>
+            <button class="btn register-btn" onclick="openRegister()">Register</button>
+        </div>
 
-        <li id="logoutNav"
-            class="hidden">
-
-            <a href="#"
-               onclick="logout()"
-               class="nav-button">
-                Logout
-            </a>
-
-        </li>
-
-    </ul>
-
-</nav>
+    </header>
 
 
+    <!-- ================= HOME ================= -->
 
-<!-- =========================
-     HOME
-========================= -->
+    <section id="home" class="hero">
 
-<section id="home"
-         class="hero">
+        <div class="hero-content">
 
-    <div class="hero-content">
+            <p class="welcome">🌿 Welcome to MoneySmart Rural</p>
 
-        <h1>
-            Financial Literacy
-            for Rural Students
-        </h1>
+            <h1>
+                Financial Literacy
+                <span>for Rural Students</span>
+            </h1>
 
+            <p class="hero-text">
+                Learn how to save, budget, bank and use digital payments safely.
+                Build smart money habits for a better future.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#learn" class="primary-btn">
+                    📖 Start Learning
+                </a>
+
+                <a href="#quiz" class="secondary-btn">
+                    📝 Take Quiz
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div>
+                    <strong>🐷 Save</strong>
+                    <small>for tomorrow</small>
+                </div>
+
+                <div>
+                    <strong>📊 Budget</strong>
+                    <small>your money</small>
+                </div>
+
+                <div>
+                    <strong>🏦 Bank</strong>
+                    <small>with confidence</small>
+                </div>
+
+                <div>
+                    <strong>📱 Pay</strong>
+                    <small>safely</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= HERO IMAGE ================= -->
+
+        <div class="hero-image-card">
+
+            <<img
+    src="images/image.png"
+    alt="Rural students learning about financial literacy"
+>
+            >
+
+            <div class="image-overlay">
+
+                <h3>Learn • Save • Grow</h3>
+
+                <p>
+                    Smart financial habits for a brighter future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro-section">
+
+        <div class="section-heading">
+
+            <span>💡</span>
+
+            <div>
+                <h2>Learn Today, Secure Tomorrow</h2>
+
+                <p>
+                    Financial knowledge helps students make better decisions
+                    about saving, spending and using money safely.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🐷</div>
+                <h3>Saving</h3>
+                <p>
+                    Learn how to save money regularly and build good
+                    financial habits.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Budgeting</h3>
+                <p>
+                    Understand income, expenses and how to plan your money.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏦</div>
+                <h3>Banking</h3>
+                <p>
+                    Learn about bank accounts, interest and basic banking
+                    services.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Digital Payments</h3>
+                <p>
+                    Use UPI and digital payments safely and confidently.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LEARN ================= -->
+
+    <section id="learn" class="section">
+
+        <div class="section-title">
+
+            <span>📚</span>
+
+            <h2>Learn Financial Basics</h2>
+
+            <p>
+                Simple lessons to help you understand and manage money.
+            </p>
+
+        </div>
+
+
+        <div class="learning-grid">
+
+            <div class="learning-card">
+
+                <div class="learn-image">🐷</div>
+
+                <h3>Saving Money</h3>
+
+                <p>
+                    Understand why saving is important and how small
+                    savings can grow over time.
+                </p>
+
+                <button onclick="showTopic('saving')">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <div class="learn-image">📊</div>
+
+                <h3>Budgeting</h3>
+
+                <p>
+                    Learn how to plan your income and expenses and avoid
+                    unnecessary spending.
+                </p>
+
+                <button onclick="showTopic('budget')">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <div class="learn-image">🏦</div>
+
+                <h3>Banking</h3>
+
+                <p>
+                    Learn about savings accounts, deposits, interest and
+                    basic banking services.
+                </p>
+
+                <button onclick="showTopic('banking')">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <div class="learn-image">📱</div>
+
+                <h3>Digital Payments</h3>
+
+                <p>
+                    Learn how to use UPI and digital payment services safely.
+                </p>
+
+                <button onclick="showTopic('digital')">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <div class="learn-image">💰</div>
+
+                <h3>Loans & Interest</h3>
+
+                <p>
+                    Understand loans, interest and the importance of
+                    borrowing responsibly.
+                </p>
+
+                <button onclick="showTopic('loan')">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <div class="learn-image">🔐</div>
+
+                <h3>Financial Safety</h3>
+
+                <p>
+                    Protect yourself from scams, fraud, fake calls and
+                    suspicious messages.
+                </p>
+
+                <button onclick="showTopic('safety')">
+                    Learn More →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALCULATOR ================= -->
+
+    <section id="calculator" class="calculator-section">
+
+        <div class="section-title">
+
+            <span>🧮</span>
+
+            <h2>Savings Calculator</h2>
+
+            <p>
+                Calculate how your savings can grow over time.
+            </p>
+
+        </div>
+
+
+        <div class="calculator-box">
+
+            <label>Monthly Saving (₹)</label>
+
+            <input
+                type="number"
+                id="monthlySaving"
+                placeholder="Example: 1000"
+            >
+
+            <label>Annual Interest Rate (%)</label>
+
+            <input
+                type="number"
+                id="interestRate"
+                placeholder="Example: 7"
+            >
+
+            <label>Saving Period (Years)</label>
+
+            <input
+                type="number"
+                id="savingYears"
+                placeholder="Example: 5"
+            >
+
+            <button onclick="calculateSavings()">
+                Calculate Savings
+            </button>
+
+            <div id="calculatorResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ ================= -->
+
+    <section id="quiz" class="quiz-section">
+
+        <div class="section-title">
+
+            <span>📝</span>
+
+            <h2>Financial Literacy Quiz</h2>
+
+            <p>
+                Test your financial knowledge.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+            <div class="quiz-progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="questionNumber">
+                Question 1 of 5
+            </p>
+
+            <h3 id="question">
+                Loading question...
+            </h3>
+
+            <div id="answers"></div>
+
+            <button
+                id="nextButton"
+                onclick="nextQuestion()"
+            >
+                Next Question
+            </button>
+
+            <div id="quizResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAFETY ================= -->
+
+    <section id="safety" class="section safety-section">
+
+        <div class="section-title">
+
+            <span>🔐</span>
+
+            <h2>Stay Financially Safe</h2>
+
+            <p>
+                Follow these simple rules to protect your money.
+            </p>
+
+        </div>
+
+
+        <div class="safety-grid">
+
+            <div class="safety-card">
+                <span>🔑</span>
+                <h3>Never Share OTP</h3>
+                <p>
+                    Never share your OTP with anyone.
+                </p>
+            </div>
+
+            <div class="safety-card">
+                <span>📱</span>
+                <h3>Protect UPI PIN</h3>
+                <p>
+                    Never share your UPI PIN with anyone.
+                </p>
+            </div>
+
+            <div class="safety-card">
+                <span>📞</span>
+                <h3>Beware of Fake Calls</h3>
+                <p>
+                    Do not trust unknown callers asking for money.
+                </p>
+            </div>
+
+            <div class="safety-card">
+                <span>🔗</span>
+                <h3>Avoid Suspicious Links</h3>
+                <p>
+                    Do not click unknown financial links.
+                </p>
+            </div>
+
+            <div class="safety-card">
+                <span>🔒</span>
+                <h3>Use Strong Passwords</h3>
+                <p>
+                    Keep your accounts protected with strong passwords.
+                </p>
+            </div>
+
+            <div class="safety-card">
+                <span>🚨</span>
+                <h3>Report Fraud</h3>
+                <p>
+                    Report suspicious financial activity immediately.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-title">
+
+            <span>🌱</span>
+
+            <h2>About MoneySmart Rural</h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                MoneySmart Rural is a financial literacy website designed
+                to help rural students understand basic financial concepts
+                in a simple and practical way.
+            </p>
+
+            <p>
+                The website focuses on saving, budgeting, banking,
+                digital payments, loans, interest and financial safety.
+            </p>
+
+            <h3>Our Objectives</h3>
+
+            <ul>
+                <li>Improve basic financial awareness.</li>
+                <li>Encourage regular saving habits.</li>
+                <li>Teach simple budgeting skills.</li>
+                <li>Promote safe digital payments.</li>
+                <li>Create awareness about online financial fraud.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEEDBACK ================= -->
+
+    <section class="feedback-section">
+
+        <div class="section-title">
+
+            <span>💬</span>
+
+            <h2>Give Your Feedback</h2>
+
+            <p>
+                Tell us what you think about MoneySmart Rural.
+            </p>
+
+        </div>
+
+
+        <form
+            class="feedback-form"
+            onsubmit="submitFeedback(event)"
+        >
+
+            <input
+                type="text"
+                id="feedbackName"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="feedbackEmail"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="feedbackMessage"
+                placeholder="Your Feedback"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🌱 MoneySmart Rural</h3>
 
         <p>
-            Learn how to save, budget,
-            use banks, make digital payments
-            and protect your money.
+            Financial Literacy for Rural Students
         </p>
 
+        <p>
+            © 2026 MoneySmart Rural. All Rights Reserved.
+        </p>
 
-        <a href="#learn"
-           class="btn">
-            Start Learning 🚀
-        </a>
-
-    </div>
-
-</section>
+    </footer>
 
 
+    <!-- ================= LOGIN ================= -->
 
-<!-- =========================
-     LEARN
-========================= -->
+    <div id="loginModal" class="modal">
 
-<section id="learn">
+        <div class="modal-content">
 
-    <h2 class="section-title">
-        📚 Learn Financial Basics
-    </h2>
+            <span
+                class="close"
+                onclick="closeModals()"
+            >
+                &times;
+            </span>
 
+            <h2>Login</h2>
 
-    <p class="section-subtitle">
-        Simple financial knowledge
-        for better money decisions.
-    </p>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                💰
-            </div>
-
-            <h3>
-                Saving
-            </h3>
-
-            <p>
-                Learn why saving money is important
-                and how to build a regular saving habit.
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🏦
-            </div>
-
-            <h3>
-                Banking
-            </h3>
-
-            <p>
-                Understand bank accounts,
-                ATMs, passbooks and interest.
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                📊
-            </div>
-
-            <h3>
-                Budgeting
-            </h3>
-
-            <p>
-                Learn how to manage income,
-                expenses and savings.
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                📱
-            </div>
-
-            <h3>
-                Digital Payments
-            </h3>
-
-            <p>
-                Learn about UPI, QR payments
-                and safe digital transactions.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     LOGIN
-========================= -->
-
-<section id="login"
-         class="auth-section">
-
-    <div class="auth-container">
-
-        <h2>
-            🔐 Student Login
-        </h2>
-
-
-        <div class="form-group">
-
-            <label>
-                Email
-            </label>
+            <p>Login to MoneySmart Rural</p>
 
             <input
                 type="email"
                 id="loginEmail"
-                placeholder="Enter your email">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Password
-            </label>
+                placeholder="Email"
+            >
 
             <input
                 type="password"
                 id="loginPassword"
-                placeholder="Enter your password">
+                placeholder="Password"
+            >
 
-        </div>
-
-
-        <button
-            class="btn"
-            onclick="login()">
-
-            Login
-
-        </button>
-
-
-        <p id="loginMessage"
-           class="error-message">
-        </p>
-
-
-        <div class="auth-switch">
-
-            Don't have an account?
-
-            <a href="#register">
-                Register
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     REGISTER
-========================= -->
-
-<section id="register"
-         class="auth-section">
-
-    <div class="auth-container">
-
-        <h2>
-            📝 Student Registration
-        </h2>
-
-
-        <div class="form-group">
-
-            <label>
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="registerName"
-                placeholder="Enter your full name">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Email
-            </label>
-
-            <input
-                type="email"
-                id="registerEmail"
-                placeholder="Enter your email">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Password
-            </label>
-
-            <input
-                type="password"
-                id="registerPassword"
-                placeholder="Create a password">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Confirm Password
-            </label>
-
-            <input
-                type="password"
-                id="confirmPassword"
-                placeholder="Confirm your password">
-
-        </div>
-
-
-        <button
-            class="btn"
-            onclick="register()">
-
-            Create Account
-
-        </button>
-
-
-        <p id="registerMessage"
-           class="error-message">
-        </p>
-
-
-        <div class="auth-switch">
-
-            Already have an account?
-
-            <a href="#login">
+            <button onclick="loginUser()">
                 Login
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     DASHBOARD
-========================= -->
-
-<section id="dashboard"
-         class="hidden">
-
-    <div class="dashboard-container">
-
-
-        <div class="welcome-box">
-
-            <h2>
-                🎓 Welcome,
-                <span id="studentName">
-                    Student
-                </span>
-                !
-            </h2>
-
+            </button>
 
             <p>
-                Welcome to your MoneySmart Rural
-                student dashboard.
+                Don't have an account?
+
+                <span
+                    class="modal-link"
+                    onclick="switchToRegister()"
+                >
+                    Register
+                </span>
             </p>
 
         </div>
 
+    </div>
 
 
-        <div class="dashboard-cards">
+    <!-- ================= REGISTER ================= -->
 
+    <div id="registerModal" class="modal">
 
-            <div class="dashboard-card">
+        <div class="modal-content">
 
-                <h3>
-                    📚 Learning
-                </h3>
+            <span
+                class="close"
+                onclick="closeModals()"
+            >
+                &times;
+            </span>
 
-                <p>
-                    Explore financial basics
-                    and improve your knowledge.
-                </p>
+            <h2>Create Account</h2>
 
-            </div>
+            <p>Register for MoneySmart Rural</p>
 
+            <input
+                type="text"
+                id="registerName"
+                placeholder="Full Name"
+            >
 
+            <input
+                type="email"
+                id="registerEmail"
+                placeholder="Email"
+            >
 
-            <div class="dashboard-card">
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Password"
+            >
 
-                <h3>
-                    💰 Savings
-                </h3>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+            >
 
-                <p>
-                    Use our calculator to
-                    plan your monthly savings.
-                </p>
+            <button onclick="registerUser()">
+                Register
+            </button>
 
-            </div>
+            <p>
+                Already have an account?
 
-
-
-            <div class="dashboard-card">
-
-                <h3>
-                    🧠 Quiz
-                </h3>
-
-                <p>
-                    Test your financial
-                    literacy knowledge.
-                </p>
-
-            </div>
+                <span
+                    class="modal-link"
+                    onclick="switchToLogin()"
+                >
+                    Login
+                </span>
+            </p>
 
         </div>
 
     </div>
 
-</section>
 
+    <!-- ================= TOPIC POPUP ================= -->
 
+    <div id="topicModal" class="modal">
 
-<!-- =========================
-     CALCULATOR
-========================= -->
+        <div class="modal-content topic-content">
 
-<section id="calculator"
-         class="calculator-section">
+            <span
+                class="close"
+                onclick="closeTopic()"
+            >
+                &times;
+            </span>
 
-    <h2 class="section-title">
-        💰 Savings Calculator
-    </h2>
+            <h2 id="topicTitle">
+                Financial Topic
+            </h2>
 
-
-    <p class="section-subtitle">
-        Find out how much you can save every month.
-    </p>
-
-
-    <div class="calculator-box">
-
-
-        <label>
-            Monthly Income (₹)
-        </label>
-
-
-        <input
-            type="number"
-            id="income"
-            placeholder="Example: 15000"
-            min="0">
-
-
-        <label>
-            Monthly Expenses (₹)
-        </label>
-
-
-        <input
-            type="number"
-            id="expenses"
-            placeholder="Example: 10000"
-            min="0">
-
-
-        <button
-            class="btn"
-            onclick="calculateSavings()">
-
-            Calculate Savings 💵
-
-        </button>
-
-
-        <div id="result">
-
-            Enter your income
-            and expenses.
+            <p id="topicText">
+                Learn more about this topic.
+            </p>
 
         </div>
 
     </div>
 
-</section>
 
+    <!-- ================= JAVASCRIPT ================= -->
 
-
-<!-- =========================
-     QUIZ
-========================= -->
-
-<section id="quiz">
-
-    <h2 class="section-title">
-        🧠 Financial Literacy Quiz
-    </h2>
-
-
-    <p class="section-subtitle">
-        Test your financial knowledge.
-    </p>
-
-
-    <div class="quiz-box">
-
-
-        <!-- QUESTION 1 -->
-
-        <div class="question">
-
-            <h3>
-                1. Why should we save money?
-            </h3>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q1"
-                    value="wrong">
-
-                A. To spend everything immediately
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q1"
-                    value="correct">
-
-                B. To prepare for future needs
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q1"
-                    value="wrong">
-
-                C. To increase unnecessary expenses
-
-            </label>
-
-        </div>
-
-
-
-        <!-- QUESTION 2 -->
-
-        <div class="question">
-
-            <h3>
-                2. What should you never share?
-            </h3>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q2"
-                    value="wrong">
-
-                A. Your name
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q2"
-                    value="correct">
-
-                B. Your UPI PIN
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q2"
-                    value="wrong">
-
-                C. Your favourite colour
-
-            </label>
-
-        </div>
-
-
-
-        <!-- QUESTION 3 -->
-
-        <div class="question">
-
-            <h3>
-                3. What is a budget?
-            </h3>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q3"
-                    value="correct">
-
-                A. A plan for income and expenses
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q3"
-                    value="wrong">
-
-                B. A shopping list
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q3"
-                    value="wrong">
-
-                C. A bank card
-
-            </label>
-
-        </div>
-
-
-
-        <!-- QUESTION 4 -->
-
-        <div class="question">
-
-            <h3>
-                4. What is UPI used for?
-            </h3>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q4"
-                    value="wrong">
-
-                A. Taking photographs
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q4"
-                    value="correct">
-
-                B. Digital payments
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q4"
-                    value="wrong">
-
-                C. Writing documents
-
-            </label>
-
-        </div>
-
-
-
-        <!-- QUESTION 5 -->
-
-        <div class="question">
-
-            <h3>
-                5. Why is financial literacy important?
-            </h3>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q5"
-                    value="correct">
-
-                A. It helps make better financial decisions
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q5"
-                    value="wrong">
-
-                B. It encourages unnecessary spending
-
-            </label>
-
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="q5"
-                    value="wrong">
-
-                C. It removes the need for saving
-
-            </label>
-
-        </div>
-
-
-
-        <button
-            class="btn"
-            onclick="checkQuiz()">
-
-            Submit Quiz 📝
-
-        </button>
-
-
-        <div id="quizResult"></div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SAFETY
-========================= -->
-
-<section id="safety"
-         class="safety">
-
-    <h2 class="section-title">
-        🛡️ Digital Money Safety
-    </h2>
-
-
-    <p class="section-subtitle">
-        Follow these rules to protect your money.
-    </p>
-
-
-    <div class="safety-list">
-
-
-        <div class="safety-item">
-            🔐 Never share your OTP with anyone.
-        </div>
-
-
-        <div class="safety-item">
-            🔑 Never share your UPI PIN.
-        </div>
-
-
-        <div class="safety-item">
-            📱 Don't click unknown payment links.
-        </div>
-
-
-        <div class="safety-item">
-            ⚠️ Be careful of fake calls and messages.
-        </div>
-
-
-        <div class="safety-item">
-            🏦 Contact your bank if you notice
-            suspicious transactions.
-        </div>
-
-
-        <div class="safety-item">
-            🚨 If something seems suspicious,
-            stop the transaction and verify first.
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-    <h2 class="section-title">
-        ℹ️ About Our Project
-    </h2>
-
-
-    <div class="about-box">
-
-        <p>
-            This website is created as part of our
-            college project on
-            <strong>
-                Financial Literacy for Rural Students.
-            </strong>
-        </p>
-
-
-        <p>
-            The objective of this project is to help
-            students understand saving, budgeting,
-            banking, digital payments and financial safety.
-        </p>
-
-
-        <p>
-            Our goal is to make financial knowledge
-            simple, useful and accessible.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <p>
-        © 2026 MoneySmart Rural
-    </p>
-
-
-    <p>
-        Learn • Save • Budget • Grow 💚
-    </p>
-
-</footer>
-
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-
-/* =========================
-   REGISTER
-========================= */
-
-function register() {
-
-    let name =
-        document.getElementById("registerName").value.trim();
-
-
-    let email =
-        document.getElementById("registerEmail").value.trim();
-
-
-    let password =
-        document.getElementById("registerPassword").value;
-
-
-    let confirmPassword =
-        document.getElementById("confirmPassword").value;
-
-
-    let message =
-        document.getElementById("registerMessage");
-
-
-    if (
-        name === "" ||
-        email === "" ||
-        password === "" ||
-        confirmPassword === ""
-    ) {
-
-        message.className = "error-message";
-
-        message.innerHTML =
-            "⚠️ Please fill all fields.";
-
-        return;
-    }
-
-
-    if (password.length < 6) {
-
-        message.className = "error-message";
-
-        message.innerHTML =
-            "⚠️ Password must contain at least 6 characters.";
-
-        return;
-    }
-
-
-    if (password !== confirmPassword) {
-
-        message.className = "error-message";
-
-        message.innerHTML =
-            "⚠️ Passwords do not match.";
-
-        return;
-    }
-
-
-    let existingUser =
-        localStorage.getItem("moneySmartUser");
-
-
-    if (existingUser) {
-
-        let user =
-            JSON.parse(existingUser);
-
-
-        if (user.email === email) {
-
-            message.className = "error-message";
-
-            message.innerHTML =
-                "⚠️ An account with this email already exists.";
-
-            return;
-        }
-
-    }
-
-
-    let user = {
-
-        name: name,
-
-        email: email,
-
-        password: password
-
-    };
-
-
-    localStorage.setItem(
-        "moneySmartUser",
-        JSON.stringify(user)
-    );
-
-
-    message.className =
-        "success-message";
-
-
-    message.innerHTML =
-        "✅ Registration successful! You can now login.";
-
-
-    document.getElementById("registerName").value = "";
-
-    document.getElementById("registerEmail").value = "";
-
-    document.getElementById("registerPassword").value = "";
-
-    document.getElementById("confirmPassword").value = "";
-
-}
-
-
-
-/* =========================
-   LOGIN
-========================= */
-
-function login() {
-
-    let email =
-        document.getElementById("loginEmail").value.trim();
-
-
-    let password =
-        document.getElementById("loginPassword").value;
-
-
-    let message =
-        document.getElementById("loginMessage");
-
-
-    let savedUser =
-        localStorage.getItem("moneySmartUser");
-
-
-    if (!savedUser) {
-
-        message.innerHTML =
-            "⚠️ No account found. Please register first.";
-
-        return;
-    }
-
-
-    let user =
-        JSON.parse(savedUser);
-
-
-    if (
-        email === user.email &&
-        password === user.password
-    ) {
-
-        localStorage.setItem(
-            "moneySmartLoggedIn",
-            "true"
-        );
-
-
-        localStorage.setItem(
-            "moneySmartCurrentUser",
-            JSON.stringify(user)
-        );
-
-
-        message.className =
-            "success-message";
-
-
-        message.innerHTML =
-            "✅ Login successful!";
-
-
-        showDashboard(user);
-
-
-    } else {
-
-        message.className =
-            "error-message";
-
-
-        message.innerHTML =
-            "❌ Incorrect email or password.";
-
-    }
-
-}
-
-
-
-/* =========================
-   SHOW DASHBOARD
-========================= */
-
-function showDashboard(user) {
-
-    document
-        .getElementById("dashboard")
-        .classList.remove("hidden");
-
-
-    document
-        .getElementById("studentName")
-        .innerHTML = user.name;
-
-
-    document
-        .getElementById("loginNav")
-        .classList.add("hidden");
-
-
-    document
-        .getElementById("logoutNav")
-        .classList.remove("hidden");
-
-
-    document
-        .getElementById("dashboard")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-
-/* =========================
-   LOGOUT
-========================= */
-
-function logout() {
-
-    localStorage.removeItem(
-        "moneySmartLoggedIn"
-    );
-
-
-    localStorage.removeItem(
-        "moneySmartCurrentUser"
-    );
-
-
-    document
-        .getElementById("dashboard")
-        .classList.add("hidden");
-
-
-    document
-        .getElementById("loginNav")
-        .classList.remove("hidden");
-
-
-    document
-        .getElementById("logoutNav")
-        .classList.add("hidden");
-
-
-    alert(
-        "You have been logged out successfully."
-    );
-
-
-    document
-        .getElementById("login")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-
-/* =========================
-   CHECK LOGIN ON PAGE LOAD
-========================= */
-
-window.onload = function() {
-
-    let loggedIn =
-        localStorage.getItem(
-            "moneySmartLoggedIn"
-        );
-
-
-    let savedUser =
-        localStorage.getItem(
-            "moneySmartCurrentUser"
-        );
-
-
-    if (
-        loggedIn === "true" &&
-        savedUser
-    ) {
-
-        let user =
-            JSON.parse(savedUser);
-
-
-        showDashboard(user);
-
-    }
-
-};
-
-
-
-/* =========================
-   SAVINGS CALCULATOR
-========================= */
-
-function calculateSavings() {
-
-    let income =
-        parseFloat(
-            document.getElementById("income").value
-        ) || 0;
-
-
-    let expenses =
-        parseFloat(
-            document.getElementById("expenses").value
-        ) || 0;
-
-
-    let savings =
-        income - expenses;
-
-
-    let result =
-        document.getElementById("result");
-
-
-    if (income <= 0) {
-
-        result.innerHTML =
-            "⚠️ Please enter your monthly income.";
-
-        return;
-    }
-
-
-    if (expenses < 0) {
-
-        result.innerHTML =
-            "⚠️ Expenses cannot be negative.";
-
-        return;
-    }
-
-
-    if (savings > 0) {
-
-        result.innerHTML =
-            "🎉 Your monthly savings are ₹" +
-            savings.toFixed(2) +
-            ". Keep saving!";
-
-    }
-
-
-    else if (savings === 0) {
-
-        result.innerHTML =
-            "⚠️ Your income and expenses are equal.";
-
-    }
-
-
-    else {
-
-        result.innerHTML =
-            "❗ Your expenses are ₹" +
-            Math.abs(savings).toFixed(2) +
-            " more than your income.";
-
-    }
-
-}
-
-
-
-/* =========================
-   QUIZ
-========================= */
-
-function checkQuiz() {
-
-    let questions = [
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5"
-    ];
-
-
-    let score = 0;
-
-
-    let unanswered = 0;
-
-
-    questions.forEach(function(question) {
-
-        let selected =
-            document.querySelector(
-                'input[name="' +
-                question +
-                '"]:checked'
-            );
-
-
-        if (!selected) {
-
-            unanswered++;
-
-        }
-
-
-        else if (
-            selected.value === "correct"
-        ) {
-
-            score++;
-
-        }
-
-    });
-
-
-    let result =
-        document.getElementById("quizResult");
-
-
-    if (unanswered > 0) {
-
-        result.innerHTML =
-            "⚠️ Please answer all 5 questions.";
-
-        return;
-    }
-
-
-    if (score === 5) {
-
-        result.innerHTML =
-            "🏆 Excellent! You scored 5/5!";
-
-    }
-
-
-    else if (score >= 3) {
-
-        result.innerHTML =
-            "👏 Good job! You scored " +
-            score +
-            "/5.";
-
-    }
-
-
-    else {
-
-        result.innerHTML =
-            "📚 You scored " +
-            score +
-            "/5. Keep learning and try again!";
-
-    }
-
-}
-
-</script>
-
+    <script src="script.js"></script>
 
 </body>
 
